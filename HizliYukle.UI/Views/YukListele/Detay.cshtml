@@ -1,0 +1,27 @@
+﻿@using HizliYukle.BOL.Entites
+
+@model YukBilgi
+
+<section class="about-area gray-bg section-padding">
+    <div class="container">
+        <div class="row">
+         
+                <div class="col-md-12 col-lg-12 col-md-offset-1 col-lg-offset-1 col-sm-12 col-xs-12">
+                    <div class="about-content-area wow fadeIn">
+                        <div class="about-content">
+                            <h3>Yukleme:@Model.YuklemeSehri>>>boşaltma:@Model.BosaltmaSehri</h3>
+                            <h3>Ilce:@Model.YuklemeIlce>>>İlce:@Model.BosaltmaIlce</h3>
+
+
+                            <p>@Model.Aciklama</p>
+                            <p>Yukleme Tarihi:@Model.YukuYuklemeTarih</p>
+                            <p>Firma:@Model.YukVeren.FirmaAd</p>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+        </div>
+    </div>
+</section>

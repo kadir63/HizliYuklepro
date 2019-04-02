@@ -1,0 +1,80 @@
+﻿@model HizliYukle.BOL.Entites.YukBilgi
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>YukBilgi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.YukVeren.FirmaAd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YukVeren.FirmaAd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aciklama)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aciklama)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YuklemeSehri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YuklemeSehri)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YuklemeIlce)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YuklemeIlce)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BosaltmaSehri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BosaltmaSehri)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BosaltmaIlce)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BosaltmaIlce)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YukuYuklemeTarih)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YukuYuklemeTarih)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

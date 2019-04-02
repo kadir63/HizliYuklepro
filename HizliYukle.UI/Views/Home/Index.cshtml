@@ -1,0 +1,114 @@
+﻿<!--START HOME SLIDER AREA-->
+
+<div class="welcome-slider-area">
+    <div class="welcome-single-slide slider-bg-one">
+        <div class="container">
+            <div class="row flex-v-center">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="welcome-text text-center">
+                        <h1>Yük bulmanın hızlı yolu</h1>
+                        <p>----</p>
+                        <div class="home-button">
+                            <a href="#">Araç Bul</a>
+                            <a href="@Url.Action("index","Yukbilgis")">Yük Bul</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="welcome-single-slide slider-bg-two">
+        <div class="container">
+            <div class="row flex-v-center">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="welcome-text text-center">
+                        <h1>Yük bulmanın hızlı yolu</h1>
+                        <p>----</p>
+                        <div class="home-button">
+                            <a href="#">Araç Bul</a>
+                            <a href="@Url.Action("index","Yukbilgis")">Yük Bul</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--END HOME SLIDER AREA-->
+
+<div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+    <div class="row" style="margin-right:10px">
+        <p><a href="single-blog.html">Air Freight</a></p>
+        <p><a href="single-blog.html">Air Freight</a></p>
+        <p><a href="single-blog.html">Air Freight</a></p>
+        <p><a href="single-blog.html">Air Freight</a></p>
+      
+
+    </div>
+</div>
+
+
+<section class="blog-area gray-bg padding-top">
+    <div class="container">
+        <div class="row">
+    
+            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                <div class="single-blog wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="blog-image">
+                        <img src="/Content/img/blog/blog_2.jpg" alt="">
+                    </div>
+                    <div class="blog-details text-center">
+                        <div class="blog-meta"><a href="#"><i class="fa fa-plane"></i></a></div>
+                        <h3><a href="single-blog.html">Air Freight</a></h3>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout..</p>
+                        <a href="single-blog.html" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                <div class="single-blog wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="blog-image">
+                        <img src="/Content/img/blog/blog_3.jpg" alt="">
+                    </div>
+                    <div class="blog-details text-center">
+                        <div class="blog-meta"><a href="#"><i class="fa fa-truck"></i></a></div>
+                        <h3><a href="single-blog.html">Street Freight</a></h3>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout..</p>
+                        <a href="single-blog.html" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--BLOG AREA END-->
+<!--ABOUT AREA-->
+@using HizliYukle.BOL.Entites
+
+@model  IEnumerable<YukBilgi>
+
+<section class="about-area gray-bg section-padding">
+    <div class="container">
+        <div class="row">
+            @foreach (YukBilgi hby in Model)
+            {
+                <div class="col-md-12 col-lg-12 col-md-offset-1 col-lg-offset-1 col-sm-12 col-xs-12">
+                    <div class="about-content-area wow fadeIn">
+                        <div class="about-content">
+                            <h2>Yukleme:@hby.YuklemeSehri>>>boşaltma:@hby.BosaltmaSehri</h2>
+                            <p>@hby.Aciklama</p>
+                            <a href="@Url.Action("Detay","YukListele", new {GelenID=hby.ID })">Detay <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>
+<!--ABOUT AREA END-->
+<!--SERVICE AREA-->
+<!--SERVICE AREA END-->
+<!--PROMO AREA-->

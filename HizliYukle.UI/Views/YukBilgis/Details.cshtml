@@ -1,0 +1,74 @@
+﻿@model HizliYukle.BOL.Entites.YukBilgi
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>YukBilgi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.YukVeren.FirmaAd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YukVeren.FirmaAd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aciklama)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aciklama)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YuklemeSehri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YuklemeSehri)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YuklemeIlce)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YuklemeIlce)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BosaltmaSehri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BosaltmaSehri)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BosaltmaIlce)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BosaltmaIlce)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YukuYuklemeTarih)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YukuYuklemeTarih)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

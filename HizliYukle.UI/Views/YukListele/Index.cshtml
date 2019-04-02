@@ -1,0 +1,23 @@
+﻿@using HizliYukle.BOL.Entites
+
+@model  IEnumerable<YukBilgi>
+
+<section class="about-area gray-bg section-padding">
+    <div class="container">
+        <div class="row">
+            @foreach (YukBilgi hby in Model)
+            {
+                <div class="col-md-12 col-lg-12 col-md-offset-1 col-lg-offset-1 col-sm-12 col-xs-12">
+                    <div class="about-content-area wow fadeIn">
+                        <div class="about-content">
+                            <h2>Yukleme:@hby.YuklemeSehri>>>boşaltma:@hby.BosaltmaSehri</h2>
+                            <p>@hby.Aciklama</p>
+                            <a href="@Url.Action("Detay","YukListele", new {GelenID=hby.ID })">Detay <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>

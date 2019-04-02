@@ -1,0 +1,77 @@
+﻿@model IEnumerable<HizliYukle.BOL.Entites.YukBilgi>
+
+@{
+    ViewBag.Title = "Yük Arama";
+}
+
+<h2>Yük arama  sayfası</h2>
+<nav class="navbar navbar-light bg-light" style="margin:80px">
+    <form class="form-inline">
+        @Html.DropDownList("sehirler", (SelectList)ViewBag.Sehir, "İl Seçiniz", new { @onchange = "IlceGetir(this)", @class = "deneme" })
+        <select class="ilceler" ></select>
+       
+    </form>
+</nav>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.YukVeren.FirmaAd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aciklama)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YuklemeSehri)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YuklemeIlce)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BosaltmaSehri)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BosaltmaIlce)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YukuYuklemeTarih)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.YukVeren.FirmaAd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aciklama)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YuklemeSehri)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YuklemeIlce)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BosaltmaSehri)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BosaltmaIlce)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YukuYuklemeTarih)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
+<script src="~/Content/js/vendor/Sehir.js"></script>

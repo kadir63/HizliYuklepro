@@ -1,0 +1,106 @@
+﻿<div class="contact-form-area section-padding gray-bg ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                <div class="area-title text-center">
+                    <h3>Yukveren kayıt formu</h3>
+                    <p>Lütfen Aşağıdaki alanlara Bilgilerinizi eksiksiz bir şekilde giriniz</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                <div class="contact-form">
+                    <form action="/YukverenKayit/YukverenKayit" method="post">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <div class="form-group" id="name-field">
+                                    <div class="form-input">
+                                        <input type="text" class="form-control" id="form-name" name="FirmaAd" placeholder="FirmaAdı.." required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <div class="form-group" id="email-field">
+                                    <div class="form-input">
+                                        <input type="text" class="form-control" id="form-surname" name="Adres" placeholder="Adres.." required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <div class="form-group" id="name-field">
+                                    <div class="form-input">
+                                        <input type="tel" class="form-control" id="form-Telefon" name="Telefon" placeholder="telefon.." required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <div class="form-group" id="email-field">
+                                    <div class="form-input">
+                                        <input type="email" class="form-control" id="form-email" name="MailAddress" placeholder="Email.." required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                <div class="form-group" id="phone-field">
+                                    <div class="form-input">
+                                        <input type="text" class="form-control" id="form-sirket" name="Name" placeholder="Yetkili Adı..">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                <div class="form-group" id="phone-field">
+                                    <div class="form-input">
+                                        <input type="text" class="form-control" id="form-sirket" name="Surname" placeholder="Yetkili Soyadı..">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                <div class="form-group" id="phone-field">
+                                    <div class="form-input">
+                                        <input type="password" class="form-control" id="form-sifre" name="Password" placeholder="Bir şifre oluşturun..">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                <div class="form-group" id="phone-field">
+                                    <div class="form-input">
+                                        <input type="password" class="form-control" id="form-sifre" name="Password2" placeholder="tekrar..">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <button type="submit">Kaydol</button>
+                                </div>
+                            </div>
+                        </div>
+                        @Html.AntiForgeryToken()
+                    </form>
+                </div>
+            </div>
+
+         
+           
+        </div>
+    </div>
+    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+        <div class="contact-image text-center">
+            <img src="img/contact-right.png" alt="">
+        </div>
+    </div>
+</div>
